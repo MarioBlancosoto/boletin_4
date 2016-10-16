@@ -7,7 +7,7 @@ public class Coche {
     private int velocidade,Acelerar,Frenar;
     
     public Coche(){
-        int velocidade =0;
+         velocidade =0;
         
     }
     public Coche(int Velocidade,int Frenar,int Acelerar){
@@ -16,16 +16,29 @@ public class Coche {
         Acelerar = Acelerar;
     }
 
+    public void setVelocidade(int velocidade) {
+        this.velocidade = velocidade;
+    }
+
     public int getVelocidade() {
        
-        return Acelerar -Frenar;
+        return velocidade;
     }
    
-    public void setFrenar(int Menos){
-        Frenar = - Menos;
+    public void setFrenar(int Frenar){
+        this.Frenar =  Frenar;
     }
     
-    public void setAcelerar(int Valor){
-       Acelerar = +Valor;
+    public int getFrenar() {
+        return velocidade+Acelerar-Frenar;
     }
+    
+    public void setAcelerar(int Velocidade){
+       Acelerar = Velocidade;
+    }
+
+    public int getAcelerar() {
+        return velocidade+Acelerar;
+    }
+    
 }
